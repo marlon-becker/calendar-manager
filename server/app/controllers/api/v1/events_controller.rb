@@ -20,6 +20,15 @@ module Api
         end
       end
 
+      def destroy
+        event = Event.find(params[:id])
+        if event.destroy
+          render json: {status:'SUCCESS', message:'Deleted event', data:event}, status: :ok
+        else
+          render json: {status:'ERROR', message:'Event not deleted', data:event.errors}, status: :unprocessable_entity
+        end
+      end
+
       private
       def event_params
         params.permit(:title, :description, :event_time, :location)
