@@ -2,13 +2,13 @@ module Api
   module V1
     class EventsController < ApplicationController
       def index
-        @events = Event.order('event_time ASC');
-        render json: {status:'SUCCESS', message:'Loaded events', data:@events}, status: :ok
+        events = Event.order('event_time ASC');
+        render json: {status:'SUCCESS', message:'Loaded events', data:events}, status: :ok
       end
 
       def show
-        @event = Event.find(params[:id])
-        render json: {status:'SUCCESS', message:'Loaded event', data:@event}, status: :ok
+        event = Event.find(params[:id])
+        render json: {status:'SUCCESS', message:'Loaded event', data:event}, status: :ok
       end
 
       def create
