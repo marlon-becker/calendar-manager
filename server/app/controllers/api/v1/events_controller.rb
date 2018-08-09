@@ -22,10 +22,16 @@ module Api
 
       def destroy
         event = Event.find(params[:id])
-        if event.destroy
-          render json: {status:'SUCCESS', message:'Deleted event', data:event}, status: :ok
+        event.destroy
+        render json: {status:'SUCCESS', message:'Deleted event', data:event}, status: :ok
+      end
+
+      def update
+        event = Event.find(params[:id])
+        if event.update_attributes(event_params)
+          render json: {status:'SUCCESS', message:'Updated event', data:event}, status: :ok
         else
-          render json: {status:'ERROR', message:'Event not deleted', data:event.errors}, status: :unprocessable_entity
+          render json: {status:'ERROR', message:'Event not updated', data:event.errors}, status: :unprocessable_entity
         end
       end
 
