@@ -1,6 +1,8 @@
 module Api
   module V1
     class EventsController < ApplicationController
+      before_action :authenticate_user
+      
       def index
         events = Event.order('event_time ASC');
         render json: {status:'SUCCESS', message:'Loaded events', data:events}, status: :ok
