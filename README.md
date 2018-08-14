@@ -1,13 +1,16 @@
 # Calendar Manager APP
 
-> Small calendar APP created with Ruby on Rails for the Backend and React for the Backend
-> For seek of simplicity in the test both parts are in the same repository
+Small calendar APP created with Ruby on Rails for the Backend and React for the Backend
+
+For simplicity in the test app both parts are in the same repository
+
 > Backend /server
+
 > Frontend /client
 
 # Local Usage
 
-After cloning the repository:
+After cloning the repository...
 
 ## Setup Ruby on Rails Backend
 
@@ -45,6 +48,8 @@ mysql -u username -pyourpassword
 mysql> CREATE DATABASE calendar_manager;
 ```
 
+> Change in /server/config/database.yml username and password options to your Mysql development settings
+
 ```bash
 cd server
 bundle install
@@ -54,6 +59,7 @@ rails server
 ```
 
 > Migrate will create a fake user and events for this user
+
 > Server API will run in port 3000
 
 ## Setup React Frontend
