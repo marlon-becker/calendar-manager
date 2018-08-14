@@ -1,0 +1,43 @@
+%btn
+  border: 0
+  font-weight: 700
+  -webkit-transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1)
+  transition: all 0.2s cubic-bezier(0.215, 0.61, 0.355, 1)
+  color: white
+  cursor: pointer
+  vertical-align: text-top
+  font-size: 1rem
+  border-radius: 2rem
+  white-space: initial
+  padding: .5rem 1rem
+  transition: all .2s
+  text-decoration: none
+  text-align: center
+  white-space: nowrap
+  vertical-align: middle
+
+body
+  .btn-primary
+  .btn
+    @extend %btn
+    background-color: $color-primary
+    color: white
+    -webkit-box-shadow: inset 0 -3px 0 0 darken($color-primary, 10)
+    box-shadow: inset 0 -3px 0 0 darken($color-primary, 10)
+    &:hover
+      background-color: mix($color-neutral, $color-primary, 10)
+
+  .btn-secondary
+    @extend %btn
+    background-color: $color-neutral-dark
+    color: white
+    -webkit-box-shadow: inset 0 -3px 0 0 darken($color-neutral-dark, 10)
+    box-shadow: inset 0 -3px 0 0 darken($color-neutral-dark, 10)
+    &:hover
+      background-color: mix($color-neutral, $color-neutral-dark, 10)
+
+  .btn--active
+    @extend %btn
+    background: desaturate($color-primary, 80)
+    box-shadow: none
+    color: $color-neutral
