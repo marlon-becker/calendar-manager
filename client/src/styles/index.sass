@@ -1,0 +1,57 @@
+@import "variables"
+@import "effects"
+@import "buttons"
+@import "icons"
+
+*
+  box-sizing: border-box
+
+body
+  font-family: $font-primary
+  font-size: 1em
+  font-weight: 300
+  line-height: 1.5
+  color: var(--text-color)
+  background: var($color-background-light)
+  position: relative
+
+header
+  display: block
+  width: 100%
+  padding: 1.75em 0
+  border-bottom: 1px solid var(--border-color)
+  background: var(--neutral-color)
+  #logo
+    font-size: 175%
+    text-align: center
+    color: var(--main-color)
+    line-height: 1
+    .icon
+      padding-right: .25em
+
+main
+  display: block
+  margin: 0 auto
+  margin-top: 0
+  max-width: 150em
+
+div, ul, li, p
+  margin: 0
+  padding: 0
+
+div, p, ul, li
+  box-sizing: border-box
+
+ul, li
+  list-style: none
+
+body
+  margin: 0
+  padding: 0
+  height: 100vh
+  display: flex
+  flex-direction: row
+  padding-top: 5vh
+  align-items: flex-start
+  justify-content: center
+  background: mix($color-neutral, $color-background, 60)

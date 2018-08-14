@@ -1,0 +1,19 @@
+@import "../../styles/variables"
+
+%Loader
+  width: 25px
+  height: 25px
+  background: url(../../images/loader.svg)
+  background-repeat: no-repeat
+  background-size: contain
+
+.Loader--center-left
+ @extend %Loader
+
+.Loader--center-center
+  @extend %Loader
+  align-self: center
+  justify-content: center
+  width: 50px
+  height: 50px
+  margin: 150px 0

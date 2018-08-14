@@ -1,0 +1,33 @@
+@import "../../styles/variables"
+
+.CalendarApp__event
+  position: relative
+  background: $color-background
+  padding: 10px
+  border-radius: 10px
+  margin-bottom: 10px
+  h4
+    margin-top: 10px
+  .CalendarApp__event__actions
+    position: absolute
+    right: 10px
+    top: 10px
+  .CalendarApp__event__time
+    display: flex
+    align-items: center
+    span
+      margin-right: 5px
+
+.CalendarApp__event__location
+  display: flex
+  align-items: center
+  font-size: $font-size-small
+  text-transform: capitalize
+  border: 1px solid $color-border
+  border-width: 1px 0
+  padding: 5px 0
+  margin-bottom: 10px
+  span
+    margin-right: 3px
+    width: 13px
+    height: 13px
