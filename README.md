@@ -49,11 +49,12 @@ mysql> CREATE DATABASE calendar_manager;
 cd server
 bundle install
 bin/rails db:migrate
-bundle server
+bin/rails db:seed
+rails server
 ```
 
 > Migrate will create a fake user and events for this user
-> Server API will run in port 3001
+> Server API will run in port 3000
 
 ## Setup React Frontend
 
@@ -63,7 +64,7 @@ npm install
 npm start
 ```
 
-> Frontend will run in port 3000
+> Frontend will run in port 3001
 
 ### Testing
 
