@@ -1,4 +1,4 @@
-# Ulabox React Weather App
+# Calendar Manager APP
 
 > Small calendar APP created with Ruby on Rails for the Backend and React for the Backend
 > For seek of simplicity in the test both parts are in the same repository
