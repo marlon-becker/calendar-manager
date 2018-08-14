@@ -48,7 +48,7 @@ mysql -u username -pyourpassword
 mysql> CREATE DATABASE calendar_manager;
 ```
 
-> Change in /server/config/database.yml username and password options to your Mysql development settings
+Change in _/server/config/database.yml_ username and password options to your Mysql development settings
 
 ```bash
 cd server
